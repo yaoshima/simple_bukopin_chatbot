@@ -1,43 +1,44 @@
-intents:
-  - greet
-  - open_new_account
-  - affirm
-  - deny
-  - thanks
-  - goodbye
-  - saving_account_info
-  - inform
-
 actions:
-- utter_greet
-- list_saving_account
 - desc_saving_account_type
-
+- list_saving_account
+- utter_capacity
+- utter_default
+- utter_goodbye
+- utter_greet
+- utter_welcome
+entities:
+- saving_account_type
+intents:
+- goodbye
+- saving_account_info
+- greet
+- out_of_scope
+- inform
+- affirm
+- thanks
+- open_new_account
+- deny
+responses:
+  utter_capacity:
+  - text: Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+  utter_default:
+  - text: Viola cari tau dulu yang Anda maksud.
+  utter_goodbye:
+  - text: Bye! Jangan sungkan untuk ngobrol dengan Viola ya
+  - text: Kalau butuh info seputar layanan Bukopin, kamu bisa langusng tanyakan ke
+      Viola ya
+  utter_greet:
+  - text: Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan
+      nama saya Viola, ada yang bisa Viola bantu?.
+  - text: Halo, selamat datang. Saya Viola!.?
+  - text: Wah ada yang chat, Hai Saya Viola!.
+  utter_welcome:
+  - text: Terima kasih!
+  - text: Dengan senang hati
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
 slots:
   saving_account_type:
     type: unfeaturized
-
-entities:
-- saving_account_type
-
-responses:
-  utter_greet:
-  - text: "Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama saya Viola, ada yang bisa Viola bantu?."
-  - text: "Halo, selamat datang. Saya Viola!.?"
-  - text: "Wah ada yang chat, Hai Saya Viola!."
-
-  utter_goodbye:
-  - text: "Bye! Jangan sungkan untuk ngobrol dengan Viola ya"
-  - text: "Kalau butuh info seputar layanan Bukopin, kamu bisa langusng tanyakan ke Viola ya"
-
-  utter_welcome:
-  - text: "Terima kasih!"
-  - text: "Dengan senang hati"
-
-  utter_default:
-  - text: "Viola cari tau dulu yang Anda maksud."
-
-
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true

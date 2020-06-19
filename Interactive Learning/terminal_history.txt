@@ -1,0 +1,2684 @@
+(try_rasa) C:\Users\Yaoshima\Desktop\try RASA\Bukopin Simple Chatbot\Bukopin V2 - Interactive Learning>rasa interactive -m models/20200312-164036.tar.gz
+2020-03-13 08:44:14 INFO     rasa.cli.interactive  - Loading visualization data from ['data'].
+2020-03-13 08:44:52 INFO     absl  - Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+Processed Story Blocks: 100%|██████████████████████████████████████████████| 8/8 [00:00<00:00, 51.19it/s, # trackers=1]
+Bot loaded. Visualisation at http://localhost:5006/visualization.html .
+Type a message and press enter (press 'Ctr-c' to exit).
+? Your input -> hello viola
+? Your NLU model classified 'hello viola' with intent 'greet' and there are no entities, is this correct?  Yes
+------
+Chat History
+
+ #    Bot                        You
+────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────
+ 2                              hello viola
+                         intent: greet 0.73
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'utter_greet', correct?  Yes
+c:\users\yaoshima\anaconda3\envs\try_rasa\lib\site-packages\rasa\server.py:178: FutureWarning: Triggering actions via the execute endpoint is deprecated. Trigger an intent via the `/conversations/<conversation_id>/trigger_intent` endpoint instead.
+  result = await result
+------
+Chat History
+
+ #    Bot                                                                                           You
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                 hello viola
+                                                                                            intent: greet 0.73
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                           You
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                 hello viola
+                                                                                            intent: greet 0.73
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> wokee apa ya?
+? Is the intent 'inform' correct for '[wokee](saving_account_type:Wokee) apa ya?' and are all entities labeled correctl
+y?  Yes
+------
+Chat History
+
+ #    Bot                                                                                              You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                    hello viola
+                                                                                               intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                          [wokee](saving_accoun
+                                                                                            t_type:Wokee) apa ya?
+                                                                                              intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'desc_saving_account_type', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                              You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                    hello viola
+                                                                                               intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                          [wokee](saving_accoun
+                                                                                            t_type:Wokee) apa ya?
+                                                                                              intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> okay gitu
+? Your NLU model classified 'okay gitu' with intent 'affirm' and there are no entities, is this correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                              You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                    hello viola
+                                                                                               intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                          [wokee](saving_accoun
+                                                                                            t_type:Wokee) apa ya?
+                                                                                              intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                      okay gitu
+                                                                                              intent: affirm 0.98
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                              You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                    hello viola
+                                                                                               intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                          [wokee](saving_accoun
+                                                                                            t_type:Wokee) apa ya?
+                                                                                              intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                      okay gitu
+                                                                                              intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> kamu bot ya?
+? Your NLU model classified 'kamu bot ya?' with intent 'out_of_scope' and there are no entities, is this correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'utter_capacity', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> okay deh klo gitu
+? Your NLU model classified 'okay deh klo gitu' with intent 'affirm' and there are no entities, is this correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 0.92
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> makasih viola
+? Your NLU model classified 'makasih viola' with intent 'thanks' and there are no entities, is this correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 0.92
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                                     makasih viola
+                                                                                                  intent: thanks 0.97
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'utter_welcome', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 0.92
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                                     makasih viola
+                                                                                                  intent: thanks 0.97
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.83
+      Terima kasih!
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> udah ya viola
+? Your NLU model classified 'udah ya viola' with intent 'greet' and there are no entities, is this correct?  No
+? What intent is it?  0.10 goodbye
+? Please mark the entities using [value](type) notation udah ya viola
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 0.92
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                                     makasih viola
+                                                                                                  intent: thanks 0.97
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.83
+      Terima kasih!
+      action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 14                                                                                                     udah ya viola
+                                                                                                 intent: goodbye 1.00
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'utter_goodbye', correct?  Yes
+------
+Chat History
+
+ #    Bot                                                                                                  You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                        hello viola
+                                                                                                   intent: greet 0.73
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami, Perkenalkan nama
+      saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                              [wokee](saving_accoun
+                                                                                                t_type:Wokee) apa ya?
+                                                                                                  intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis elektronik Bank
+      Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                          okay gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    list_saving_account 0.90
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       kamu bot ya?
+                                                                                            intent: out_of_scope 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    utter_capacity 0.55
+      Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
+      Bukopin
+      action_listen 0.87
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                 okay deh klo gitu
+                                                                                                  intent: affirm 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 0.92
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                                     makasih viola
+                                                                                                  intent: thanks 0.97
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.83
+      Terima kasih!
+      action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 14                                                                                                     udah ya viola
+                                                                                                 intent: goodbye 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 15   utter_goodbye 0.44
+      Kalau butuh info seputar layanan Bukopin, kamu bisa langusng tanyakan ke
+      Viola ya
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input ->
+
+Cancelled by user
+
+? Do you want to stop?  Export & Quit
+? Export stories to (if file exists, this will append the stories) data/stories.md
+? Export NLU data to (if file exists, this will merge learned data with previous training examples) data/nlu.md
+? Export domain file to (if file exists, this will be overwritten) domain.yml
+2020-03-13 08:54:21 INFO     rasa.core.training.interactive  - Successfully wrote stories and NLU data
+2020-03-13 08:54:22 INFO     rasa.core.training.interactive  - Killing Sanic server now.
+
+(try_rasa) C:\Users\Yaoshima\Desktop\try RASA\Bukopin Simple Chatbot\Bukopin V2 - Interactive Learning>
+
++++++++++++++++++++++++++
++++++++++++++++++++++++++
++++++++++++++++++++++++++
+
+? Your input -> hai viola
+2020-03-16 08:47:03.717492: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'hai viola' with intent 'greet' and there are no entities, is this correct?  Yes
+2020-03-16 08:47:12.591396: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                        You
+────────────────────────────────────────────
+ 1    action_listen
+────────────────────────────────────────────
+ 2                                hai viola
+                         intent: greet 0.98
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'utter_greet', correct?  Yes
+c:\users\yaoshima\anaconda3\envs\try_rasa\lib\site-packages\rasa\server.py:178: FutureWarning: Triggering actions via the execute endpoint is deprecated. Trigger an intent via the `/conversations/<conversation_id>/trigger_intent` endpoint instead.
+  result = await result
+2020-03-16 08:47:21.840310: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                              You
+──────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────
+ 2                                                      hai viola
+                                               intent: greet 0.98
+──────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+2020-03-16 08:47:31.196913: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                     You
+─────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                             hai viola
+                                                                      intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  3: Wokee (/inform{"saving_account_type": "Wokee"})
+2020-03-16 08:47:46.629626: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                          You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                  hai viola
+                                                                                           intent: greet 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                    /inform{"saving_account_type": "Wokee"}
+                                                                                          intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'desc_saving_account_type', correct?  Yes
+2020-03-16 08:47:58.127564: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                          You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                  hai viola
+                                                                                           intent: greet 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                    /inform{"saving_account_type": "Wokee"}
+                                                                                          intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> hai lagi viola
+2020-03-16 08:48:31.917580: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'hai lagi viola' with intent 'greet' and there are no entities, is this correct?  Yes
+2020-03-16 08:48:37.283750: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                          You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                  hai viola
+                                                                                           intent: greet 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                    /inform{"saving_account_type": "Wokee"}
+                                                                                          intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                             hai lagi viola
+                                                                                           intent: greet 0.80
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_default_fallback', correct?  No
+------
+Chat History
+
+ #    Bot                                                                                          You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                  hai viola
+                                                                                           intent: greet 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                    /inform{"saving_account_type": "Wokee"}
+                                                                                          intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                             hai lagi viola
+                                                                                           intent: greet 0.80
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? What is the next action of the bot?  0.00 utter_greet
+Thanks! The bot will now run utter_greet.
+
+2020-03-16 08:49:22.802251: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                          You
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                  hai viola
+                                                                                           intent: greet 0.98
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                    /inform{"saving_account_type": "Wokee"}
+                                                                                          intent: inform 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                             hai lagi viola
+                                                                                           intent: greet 0.80
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+2020-03-16 08:49:36.042486: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+2020-03-16 08:49:51.234631: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'desc_saving_account_type', correct?  Yes
+2020-03-16 08:50:00.507252: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> okay deh
+2020-03-16 08:50:15.594824: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'okay deh' with intent 'affirm' and there are no entities, is this correct?  Yes
+2020-03-16 08:50:25.825834: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+2020-03-16 08:51:01.180897: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> okay, makasih viola untuk infonya
+2020-03-16 08:51:26.369050: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'okay, makasih viola untuk infonya' with intent 'thanks' and there are no entities, is this
+ correct?  Yes
+2020-03-16 08:51:31.652300: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                            okay, makasih viola untuk infonya
+                                                                                             intent: thanks 0.82
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'utter_welcome', correct?  Yes
+2020-03-16 08:51:40.629770: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                            okay, makasih viola untuk infonya
+                                                                                             intent: thanks 0.82
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.57
+      Terima kasih!
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> dah dulu ya
+2020-03-16 08:51:58.038990: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'dah dulu ya' with intent 'goodbye' and there are no entities, is this correct?  Yes
+2020-03-16 08:52:12.358180: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                            okay, makasih viola untuk infonya
+                                                                                             intent: thanks 0.82
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.57
+      Terima kasih!
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 14                                                                                                  dah dulu ya
+                                                                                            intent: goodbye 0.97
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'utter_goodbye', correct?  Yes
+2020-03-16 08:52:21.687034: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                                     hai viola
+                                                                                              intent: greet 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    utter_greet 1.00
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga Bukopin
+      (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku
+      (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                       /inform{"saving_account_type": "Wokee"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang
+      berbasis elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                hai lagi viola
+                                                                                              intent: greet 0.80
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    utter_greet
+      Halo, selamat datang. Saya Viola!.?
+      list_saving_account 0.94
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 0.95
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                /inform{"saving_account_type":
+                                                                                                   "Tabunganku"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    slot{"saving_account_type": "Tabunganku"}
+      desc_saving_account_type 0.94
+      Tabungan perorangan dengan persyaratan mudah dan ringan
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                     okay deh
+                                                                                             intent: affirm 0.94
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan
+      SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga
+      Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type":
+      "Tabunganku"})
+      3: Wokee (/inform{"saving_account_type":
+      "Wokee"})
+      Type out your own message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                            okay, makasih viola untuk infonya
+                                                                                             intent: thanks 0.82
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.57
+      Terima kasih!
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 14                                                                                                  dah dulu ya
+                                                                                            intent: goodbye 0.97
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 15   utter_goodbye 1.00
+      Kalau butuh info seputar layanan Bukopin, kamu bisa langusng
+      tanyakan ke Viola ya
+
+
+Current slots:
+        saving_account_type: Tabunganku
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+
+
+
+++++++++++++
+++++++++++++
+++++++++++++
+
+Type a message and press enter (press 'Ctr-c' to exit).
+? Your input -> jenis tabungan dong
+2020-03-16 09:03:19.193238: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'jenis tabungan dong' with intent 'saving_account_info' and there are no entities, is this
+correct?  Yes
+2020-03-16 09:03:27.095103: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                      You
+──────────────────────────────────────────────────────────
+ 1    action_listen
+──────────────────────────────────────────────────────────
+ 2                                    jenis tabungan dong
+                         intent: saving_account_info 0.91
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+c:\users\yaoshima\anaconda3\envs\try_rasa\lib\site-packages\rasa\server.py:178: FutureWarning: Triggering actions via the execute endpoint is deprecated. Trigger an intent via the `/conversations/<conversation_id>/trigger_intent` endpoint instead.
+  result = await result
+2020-03-16 09:03:48.201562: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                           You
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                         jenis tabungan dong
+                                                                              intent: saving_account_info 0.91
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+
+
+Current slots:
+        saving_account_type: None
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  1: Tabungan SiAga Bukopin (/inform{"saving_account_type": "Tabungan SiAga Buko
+pin"})
+2020-03-16 09:04:02.534360: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                           You
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                         jenis tabungan dong
+                                                                              intent: saving_account_info 0.91
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                              /inform{"saving_account_type":
+                                                                                     "Tabungan SiAga Bukopin"}
+                                                                                           intent: inform 1.00
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+
+
+Current slots:
+        saving_account_type: Tabungan SiAga Bukopin
+
+------
+? The bot wants to run 'desc_saving_account_type', correct?  Yes
+2020-03-16 09:04:12.409063: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                           You
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                         jenis tabungan dong
+                                                                              intent: saving_account_info 0.91
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                              /inform{"saving_account_type":
+                                                                                     "Tabungan SiAga Bukopin"}
+                                                                                           intent: inform 1.00
+───────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+
+
+Current slots:
+        saving_account_type: Tabungan SiAga Bukopin
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> klo wokee itu apa?
+2020-03-16 09:04:35.426520: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Is the intent 'inform' correct for 'klo [wokee](saving_account_type:Wokee) itu apa?' and are all entities labeled cor
+rectly?  Yes
+2020-03-16 09:04:44.919535: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'desc_saving_account_type', correct?  Yes
+2020-03-16 09:04:55.174157: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input -> baiklah
+2020-03-16 09:05:12.137397: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'baiklah' with intent 'affirm' and there are no entities, is this correct?  Yes
+2020-03-16 09:05:16.517015: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+2020-03-16 09:05:28.608210: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> hai viola
+2020-03-16 09:05:43.210217: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'hai viola' with intent 'greet' and there are no entities, is this correct?  Yes
+2020-03-16 09:05:47.597494: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                    hai viola
+                                                                                              intent: greet 0.99
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'utter_greet', correct?  Yes
+2020-03-16 09:05:56.659173: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                    hai viola
+                                                                                              intent: greet 0.99
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   utter_greet 0.31
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami,
+      Perkenalkan nama saya Viola, ada yang bisa Viola bantu?.
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'list_saving_account', correct?  Yes
+2020-03-16 09:06:07.123204: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                    hai viola
+                                                                                              intent: greet 0.99
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   utter_greet 0.31
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami,
+      Perkenalkan nama saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 0.95
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Berikut jenis tabungan yang tersedia:  Type out your own message...
+? Your input -> okay makasih yaa viola
+2020-03-16 09:06:27.052119: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+? Your NLU model classified 'okay makasih yaa viola' with intent 'thanks' and there are no entities, is this correct?
+Yes
+2020-03-16 09:06:32.463070: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                    hai viola
+                                                                                              intent: greet 0.99
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   utter_greet 0.31
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami,
+      Perkenalkan nama saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 0.95
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                       okay makasih yaa viola
+                                                                                             intent: thanks 0.99
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'utter_welcome', correct?  Yes
+2020-03-16 09:06:41.447665: W tensorflow/core/kernels/data/generator_dataset_op.cc:103] Error occurred when finalizing GeneratorDataset iterator: Cancelled: Operation was cancelled
+------
+Chat History
+
+ #    Bot                                                                                             You
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 1    action_listen
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 2                                                                                           jenis tabungan dong
+                                                                                intent: saving_account_info 0.91
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 3    list_saving_account 1.00
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2:
+      Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3: Wokee
+      (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 4                                                                                /inform{"saving_account_type":
+                                                                                       "Tabungan SiAga Bukopin"}
+                                                                                             intent: inform 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 5    slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+      desc_saving_account_type 1.00
+      Tabungan SiAga Bukopin, Simpanan yang penarikannya hanya dapat
+      dilakukan menurut syarat-syarat tertentu
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 6                                                                                                           klo
+                                                                              [wokee](saving_account_type:Wokee)
+                                                                                                        itu apa?
+                                                                                             intent: inform 0.98
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 7    slot{"saving_account_type": "Wokee"}
+      desc_saving_account_type 1.00
+      Tabungan Wokee, Produk Tabungan khusus perorangan yang berbasis
+      elektronik Bank Bukopin
+      action_listen 1.00
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 8                                                                                                       baiklah
+                                                                                             intent: affirm 0.92
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 9    list_saving_account 0.72
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 10                                                                                                    hai viola
+                                                                                              intent: greet 0.99
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 11   utter_greet 0.31
+      Halo Nasabah Bank Bukopin, terima kasih sudah menghubungi kami,
+      Perkenalkan nama saya Viola, ada yang bisa Viola bantu?.
+      list_saving_account 0.95
+      Berikut jenis tabungan yang tersedia:
+      Buttons:
+      1: Tabungan SiAga
+      Bukopin (/inform{"saving_account_type": "Tabungan SiAga Bukopin"})
+      2: Tabunganku (/inform{"saving_account_type": "Tabunganku"})
+      3:
+      Wokee (/inform{"saving_account_type": "Wokee"})
+      Type out your own
+      message...
+      action_listen 0.96
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 12                                                                                       okay makasih yaa viola
+                                                                                             intent: thanks 0.99
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+ 13   utter_welcome 0.53
+      Dengan senang hati
+
+
+Current slots:
+        saving_account_type: Wokee
+
+------
+? The bot wants to run 'action_listen', correct?  Yes
+? Your input ->
+
+Cancelled by user
+
+? Do you want to stop?  Export & Quit
+? Export stories to (if file exists, this will append the stories) data/stories.md
+? Export NLU data to (if file exists, this will merge learned data with previous training examples) data/nlu.md
+? Export domain file to (if file exists, this will be overwritten) domain.yml
+2020-03-16 09:07:07 INFO     rasa.core.training.interactive  - Successfully wrote stories and NLU data
+2020-03-16 09:07:07 INFO     rasa.core.training.interactive  - Killing Sanic server now.

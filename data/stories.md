@@ -33,3 +33,145 @@
 * thanks
   - utter_welcome
 
+
+## interactive_story_1
+* greet
+    - utter_greet
+    - list_saving_account
+* inform{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - desc_saving_account_type
+* saving_account_info
+    - list_saving_account
+* inform{"saving_account_type": "Tabunganku"}
+    - slot{"saving_account_type": "Tabunganku"}
+    - desc_saving_account_type
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* inform{"saving_account_type": "Tabunganku"}
+    - slot{"saving_account_type": "Tabunganku"}
+    - desc_saving_account_type
+* saving_account_info
+    - list_saving_account
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* inform{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - desc_saving_account_type
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* affirm
+    - list_saving_account
+* inform{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - desc_saving_account_type
+* affirm
+    - list_saving_account
+* inform{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - desc_saving_account_type
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+
+
+## interactive_story_1
+* greet
+    - utter_greet
+    - list_saving_account
+* inform{"saving_account_type": "Tabunganku"}
+    - slot{"saving_account_type": "Tabunganku"}
+    - desc_saving_account_type
+* out_of_scope
+    - utter_capacity
+* affirm
+    - list_saving_account
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+    - list_saving_account
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* affirm
+    - list_saving_account
+* out_of_scope
+    - utter_capacity
+* affirm
+    - list_saving_account
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* greet
+    - utter_greet
+    - list_saving_account
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* greet
+    - utter_greet
+    - list_saving_account
+* inform{"saving_account_type": "Tabunganku"}
+    - slot{"saving_account_type": "Tabunganku"}
+    - desc_saving_account_type
+* affirm
+    - list_saving_account
+* thanks
+    - utter_welcome
+* goodbye
+    - utter_goodbye
+
+## interactive_story_1
+* saving_account_info
+    - list_saving_account
+* inform{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - slot{"saving_account_type": "Tabungan SiAga Bukopin"}
+    - desc_saving_account_type
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* affirm
+    - list_saving_account
+* greet
+    - utter_greet
+    - list_saving_account
+* thanks
+    - utter_welcome
+
+## interactive_story_1
+* greet
+    - utter_greet
+    - list_saving_account
+* goodbye
+    - utter_goodbye
+* out_of_scope
+    - utter_capacity
+* saving_account_info
+    - list_saving_account
+* inform{"saving_account_type": "Wokee"}
+    - slot{"saving_account_type": "Wokee"}
+    - desc_saving_account_type
+* goodbye
+    - utter_goodbye
