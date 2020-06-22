@@ -1,24 +1,33 @@
 actions:
 - desc_saving_account_type
 - list_saving_account
+- reset_balance_form_slot
+- utter_ask_account_number
 - utter_capacity
 - utter_default
 - utter_goodbye
 - utter_greet
+- utter_slot_values
 - utter_welcome
 entities:
+- account_number
 - saving_account_type
+forms:
+- account_balance_form
 intents:
+- ask_account_balance
+- thanks
+- inform
 - goodbye
 - saving_account_info
 - greet
 - out_of_scope
-- inform
 - affirm
-- thanks
 - open_new_account
 - deny
 responses:
+  utter_ask_account_number:
+  - text: Mohon informasikan nomor rekening anda
   utter_capacity:
   - text: Viola bisa membantumu untuk mengetahui informasi seputar jenis tabungan
       Bukopin
@@ -33,6 +42,8 @@ responses:
       nama saya Viola, ada yang bisa Viola bantu?.
   - text: Halo, selamat datang. Saya Viola!.?
   - text: Wah ada yang chat, Hai Saya Viola!.
+  utter_slot_values:
+  - text: You've submitted the account number as {account_number}
   utter_welcome:
   - text: Terima kasih!
   - text: Dengan senang hati
@@ -40,5 +51,9 @@ session_config:
   carry_over_slots_to_new_session: true
   session_expiration_time: 60
 slots:
+  account_number:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
   saving_account_type:
     type: unfeaturized

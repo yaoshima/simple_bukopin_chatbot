@@ -1,3 +1,41 @@
+## ask_account_balance
+* greet
+  - utter_greet
+  - list_saving_account
+* ask_account_balance
+  - reset_balance_form_slot
+  - account_balance_form
+  - form{"name": "account_balance_form"}
+  - form{"name": null}
+  - utter_greet
+
+
+## ask_account_balance_direct_repeat
+* ask_account_balance
+  - account_balance_form
+  - form{"name": "account_balance_form"}
+  - form{"name": null}
+  - utter_greet
+* ask_account_balance
+  - reset_balance_form_slot
+  - account_balance_form
+  - form{"name": "account_balance_form"}
+  - form{"name": null}
+  - utter_greet
+* thanks
+  - utter_welcome
+
+## ask_account_balance_direct
+* ask_account_balance
+  - reset_balance_form_slot
+  - account_balance_form
+  - form{"name": "account_balance_form"}
+  - form{"name": null}
+  - utter_greet
+* thanks
+  - utter_welcome
+
+
 ## ask_saving_account_type
 * greet
   - utter_greet
@@ -175,3 +213,4 @@
     - desc_saving_account_type
 * goodbye
     - utter_goodbye
+

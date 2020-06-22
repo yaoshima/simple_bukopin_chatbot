@@ -44,6 +44,7 @@
 - makasih viola
 - okay, makasih viola untuk infonya
 - okay makasih yaa viola
+- okay makasih
 
 ## intent:out_of_scope
 - deposito apa sih?
@@ -88,6 +89,16 @@
 - [wokee](saving_account_type:Wokee) apa ya?
 - klo [wokee](saving_account_type:Wokee) itu apa?
 - [wokee](saving_account_type:Wokee) apaan tuh?
+- no rekening saya [101109873](account_number)
+- [101600202](account_number)
+- norek [4202002082](account_number)
+- [4902310587](account_number)
+
+## intent:ask_account_balance
+- info saldo
+- cek sisah saldo
+- informasi saldo
+- saldo
 
 ## synonym:Tabungan SiAga Bukopin
 - siaga bukopin
